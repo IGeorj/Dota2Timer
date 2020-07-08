@@ -1,0 +1,84 @@
+﻿<Window x:Class="Dota2Timer.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dota2Timer"
+        mc:Ignorable="d"
+        Title="Dota2Timer" Height="300" Width="500" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" Topmost="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" ShowInTaskbar="False">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.4" Color="Black"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="0" Grid.Row="0" Name="ImageHolder1" Height="70"/>
+        <Button x:Name="ChangeImage1" FontSize="10" Opacity="0.8" Background="Black" BorderThickness="0" Foreground="White" Grid.Column="0" Grid.Row="0" Width="100" Height="30" Margin="0 120 0 0" Click="ChangeImage1_Click">Change Skill</Button>
+        <Image Grid.Column="1" Grid.Row="0" Name="ImageHolder2" Height="70"/>
+        <Button x:Name="ChangeImage2" FontSize="10" Opacity="0.8" Background="Black" BorderThickness="0" Foreground="White" Grid.Column="1" Grid.Row="0" Width="100" Height="30" Margin="0 120 0 0" Click="ChangeImage2_Click">Change Skill</Button>
+        <Image Grid.Column="2" Grid.Row="0" Name="ImageHolder3" Height="70"/>
+        <Button x:Name="ChangeImage3" FontSize="10" Opacity="0.8" Background="Black" BorderThickness="0" Foreground="White" Grid.Column="2" Grid.Row="0" Width="100" Height="30" Margin="0 120 0 0" Click="ChangeImage3_Click">Change Skill</Button>
+        <Image Grid.Column="3" Grid.Row="0" Name="ImageHolder4" Height="70"/>
+        <Button x:Name="ChangeImage4" FontSize="10" Opacity="0.8" Background="Black" BorderThickness="0" Foreground="White" Grid.Column="3" Grid.Row="0" Width="100" Height="30" Margin="0 120 0 0" Click="ChangeImage4_Click">Change Skill</Button>
+        <Image Grid.Column="4" Grid.Row="0" Name="ImageHolder5" Height="70"/>
+        <Button x:Name="ChangeImage5" FontSize="10" Opacity="0.8" Background="Black" BorderThickness="0" Foreground="White" Grid.Column="4" Grid.Row="0" Width="100" Height="30" Margin="0 120 0 0" Click="ChangeImage5_Click">Change Skill</Button>
+
+        <Label Content="0" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Width="100" Height="50" Grid.Row="1" Name="CooldownTimer1" Margin="0 0 0 100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="StartTimer1" Opacity="0.7" Background="Black" BorderThickness="0" Foreground="White" Click="StartTimer1_Click" Grid.Column="0" Grid.Row="1" Width="100" Height="50">Start</Button>
+        <Label Content="0" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Width="100" Height="50" Grid.Row="1" Name="CooldownTimer2" Margin="0 0 0 100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="StartTimer2" Opacity="0.7" Background="Black" BorderThickness="0" Foreground="White" Click="StartTimer2_Click" Grid.Column="1" Grid.Row="1" Width="100" Height="50">Start</Button>
+        <Label Content="0" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="2" Width="100" Height="50" Grid.Row="1" Name="CooldownTimer3" Margin="0 0 0 100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="StartTimer3" Opacity="0.7" Background="Black" BorderThickness="0" Foreground="White" Click="StartTimer3_Click" Grid.Column="2" Grid.Row="1" Width="100" Height="50">Start</Button>
+        <Label Content="0" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="3" Width="100" Height="50" Grid.Row="1" Name="CooldownTimer4" Margin="0 0 0 100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="StartTimer4" Opacity="0.7" Background="Black" BorderThickness="0" Foreground="White" Click="StartTimer4_Click" Grid.Column="3" Grid.Row="1" Width="100" Height="50">Start</Button>
+        <Label Content="0" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="4" Width="100" Height="50" Grid.Row="1" Name="CooldownTimer5" Margin="0 0 0 100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="StartTimer5" Opacity="0.7" Background="Black" BorderThickness="0" Foreground="White" Click="StartTimer5_Click" Grid.Column="4" Grid.Row="1" Width="100" Height="50">Start</Button>
+
+        <Label Name="LevelLabel1" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 80 0 0">Level</Label>
+        <ComboBox Foreground="White" BorderThickness="0" Name="SkillLvl1" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="20 120 0 0">
+            <ComboBoxItem Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+        </ComboBox>
+        <Label Name="LevelLabel2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 80 0 0">Level</Label>
+        <ComboBox Foreground="White" BorderThickness="0" Name="SkillLvl2" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="20 120 0 0">
+            <ComboBoxItem Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+        </ComboBox>
+        <Label Name="LevelLabel3" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 80 0 0">Level</Label>
+        <ComboBox Foreground="White" BorderThickness="0" Name="SkillLvl3" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="20 120 0 0">
+            <ComboBoxItem Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+        </ComboBox>
+        <Label Name="LevelLabel4" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 80 0 0">Level</Label>
+        <ComboBox Foreground="White" BorderThickness="0" Name="SkillLvl4" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Margin="20 120 0 0">
+            <ComboBoxItem Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+        </ComboBox>
+        <Label Name="LevelLabel5" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 80 0 0">Level</Label>
+        <ComboBox Foreground="White" BorderThickness="0" Name="SkillLvl5" SelectedIndex="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="4" Margin="20 120 0 0">
+            <ComboBoxItem Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+            <ComboBoxItem Content="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="CloseButton" Click="Close_Click" Background="Transparent" Grid.Column="4" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="55 0 0 0">
+            <Button.Content>
+                <Image Source="Images/X.png"></Image>
+            </Button.Content>
+        </Button>
+        
+    </Grid>
+</Window>
